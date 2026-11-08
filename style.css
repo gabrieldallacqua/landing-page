@@ -32,36 +32,49 @@ body { background-color: var(--bg-color); color: var(--text-main); line-height: 
 input { width: 100%; padding: 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); border-radius: 8px; color: white; outline: none; }
 input:focus { border-color: var(--primary-color); }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 0 16px;
-  }
 
-  .container, 
-  .hero-section, 
-  .cards-grid, 
-  header nav {
-    flex-direction: column !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    gap: 16px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  button, .btn-whatsapp {
+/* Responsividade para Celulares (telas até 768px) */
+@media screen and (max-width: 768px) {
+  /* Previne rolagem horizontal indesejada */
+  html, body {
+    overflow-x: hidden;
     width: 100%;
-    font-size: 16px;
-    padding: 14px 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ajusta espaçamentos internos gerais */
+  section, header, footer {
+    padding: 20px 16px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Transforma layouts lado a lado em coluna única */
+  .container, 
+  .hero, 
+  .flex-container,
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  /* Impede que imagens ultrapassem a largura da tela */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Ajusta os botões para toque no celular */
+  button, .btn, a.button {
+    width: 100% !important;
+    max-width: 320px;
+    padding: 14px 20px !important;
+    font-size: 16px !important;
+    box-sizing: border-box;
   }
 }
-
-
-
-
-
-
