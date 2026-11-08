@@ -77,4 +77,7 @@ input:focus { border-color: var(--primary-color); }
     font-size: 16px !important;
     box-sizing: border-box;
   }
+  .btn-nav{
+    display:none !important;
+  }
 }
